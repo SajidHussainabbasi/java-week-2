@@ -12,40 +12,59 @@ package methods.exercises;
 
 public class Exercise4
 {
+    // Constructor prints "Object created"
+    public Exercise4()
+    {
+        System.out.println("Object created");
+    }
 
-    // TODO: Constructor prints "Object created"
-
-    // TODO: Varargs method printStrings()
+    // Varargs method printStrings()
+    public void printStrings(String... words)
+    {
+        for (String word : words)
+        {
+            System.out.println(word);
+        }
+    }
 
     public static void main(String[] args)
     {
-        // TODO: Test constructor
-
+        // Test constructor
         Exercise4 obj = new Exercise4();
 
-        // TODO: Call printStrings with multiple arguments
+        // Call printStrings with multiple arguments
+        obj.printStrings("Hello", "World", "Java", "Varargs");
 
         Shape s1 = new Circle();
-//        s1.draw();
+        s1.draw();
 
-        // TODO: Create Rectangle object and call draw()
+        // Create Rectangle object and call draw()
+        Shape s2 = new Rectangle();
+        s2.draw();
     }
 }
 
-
 abstract class Shape
 {
-    // TODO: declare abstract method draw()
+    // Abstract method draw()
+    public abstract void draw();
 }
 
 class Circle extends Shape
 {
-//    @Override
+    @Override
     public void draw()
     {
         System.out.println("Drawing a Circle");
     }
 }
 
-// TODO: Create Rectangle class that implements draw()
-
+// Rectangle class implementing draw()
+class Rectangle extends Shape
+{
+    @Override
+    public void draw()
+    {
+        System.out.println("Drawing a Rectangle");
+    }
+}

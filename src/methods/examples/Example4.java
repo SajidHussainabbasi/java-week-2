@@ -8,7 +8,6 @@ package methods.examples;
  * - main() as entry point
  */
 
-
 public class Example4
 {
     // Constructor
@@ -21,14 +20,24 @@ public class Example4
     public static void main(String[] args)
     {
         // Constructor
-        Example4 obj = new Example4 ();
+        Example4 obj = new Example4();
 
         // Varargs
         obj.printNumbers(1, 2, 3, 4, 5);
 
         // Abstract method via subclass
-        Shape shape = new Circle();
-        shape.draw();
+        Shape shape1 = new Circle();
+        shape1.draw();
+
+        Shape shape2 = new Rectangle();
+        shape2.draw();
+
+        // Polymorphism with array
+        System.out.println("\nPolymorphism demo:");
+        Shape[] shapes = { new Circle(), new Rectangle() };
+        for (Shape s : shapes) {
+            s.draw();
+        }
     }
 
     // Varargs method
@@ -42,7 +51,6 @@ public class Example4
     }
 }
 
-
 // Abstract class with abstract method
 abstract class Shape
 {
@@ -55,5 +63,14 @@ class Circle extends Shape
     public void draw()
     {
         System.out.println("Drawing a Circle");
+    }
+}
+
+class Rectangle extends Shape
+{
+    @Override
+    public void draw()
+    {
+        System.out.println("Drawing a Rectangle");
     }
 }

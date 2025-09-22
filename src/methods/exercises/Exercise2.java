@@ -19,22 +19,47 @@ public class Exercise2
         // Example usage
         obj.publicMethod();
 
-        // TODO: Call other methods here
+        // Call other methods
+        obj.protectedMethod();
+        obj.defaultMethod();
+        obj.privateMethod();  // Works because it's inside the same class
+        Exercise2.staticMethod();  // Static methods are called with class name
+        obj.finalMethod();
     }
+
     // Example: public method
     public void publicMethod()
     {
         System.out.println("Public method called");
     }
 
-    // TODO: Add protectedMethod()
+    // Protected method
+    protected void protectedMethod()
+    {
+        System.out.println("Protected method called");
+    }
 
-    // TODO: Add defaultMethod()
+    // Default (package-private) method
+    void defaultMethod()
+    {
+        System.out.println("Default (package-private) method called");
+    }
 
-    // TODO: Add privateMethod()
+    // Private method
+    private void privateMethod()
+    {
+        System.out.println("Private method called");
+    }
 
-    // TODO: Add staticMethod()
+    // Static method
+    public static void staticMethod()
+    {
+        System.out.println("Static method called");
+    }
 
-    // TODO: Add finalMethod()
-
+    // Final method
+    public final void finalMethod()
+    {
+        System.out.println("Final method called");
+    }
 }

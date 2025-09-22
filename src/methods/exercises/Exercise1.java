@@ -18,7 +18,9 @@ public class Exercise1
         // Example usage
         System.out.println("Square of 4 = " + obj.square(4));
 
-        // TODO: Call cube() and sayHello() here
+        // Call cube() and sayHello()
+        System.out.println("Cube of 3 = " + obj.cube(3));
+        obj.sayHello("Sajid");
     }
 
     // Example method: square
@@ -27,9 +29,16 @@ public class Exercise1
         return num * num;
     }
 
-    // TODO: Write cube(int num)
+    // Method: cube
+    public int cube(int num)
+    {
+        return num * num * num;
+    }
 
-    // TODO: Write sayHello(String name)
-
+    // Method: sayHello
+    public void sayHello(String name)
+    {
+        System.out.println("Hello, " + name);
+    }
 }
 
